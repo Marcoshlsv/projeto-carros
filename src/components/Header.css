@@ -1,0 +1,80 @@
+@font-face {
+  font-family: dragrace;
+  src: url(/dragrace.ttf);
+
+}
+.container {
+    background-image: url("./public/carros.png");
+    background-position: 20%;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    font-family: dragrace;
+}
+
+header {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+header nav {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 33px;
+    font-weight: 300px;
+    font-size: 22px;
+    position: relative;
+    cursor: pointer;
+}
+
+header nav a::after{
+    content: '';
+    position: absolute;
+    height:3px;
+    left:0;
+    bottom: 0;
+    width: 0;
+    background: linear-gradient(to right, #fd6c18, #ff1515);
+    transition: width .2s;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header nav a.active {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+    font-weight: bold;
+}
+
+.login {
+    font-size: 1rem;
+    align-items: right;
+  }
+
+  .login p {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .login p:hover {
+    background-color: white;
+    color: #333;
+  }
+
+@media (max-width:768px) {
+  header{
+    font-size: 19px;
+  }
+}
